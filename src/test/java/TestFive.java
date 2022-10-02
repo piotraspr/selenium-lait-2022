@@ -75,4 +75,12 @@ public class TestFive {
         Assert.assertTrue(message_is_displayed);
     }
 
+    @Test
+    public void testLocalFile(){
+        driver.get("file:///Users/piotr/IdeaProjects/selenium-lait-2022/home.html");
+        String text = driver.findElement(By.xpath("//p")).getText();
+        Assert.assertEquals("Jestem tekstem", text);
+    }
+
+
 }
